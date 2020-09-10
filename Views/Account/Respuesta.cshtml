@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Capacidad de Respuesta";
+}
+
+<div class="row">
+    <h1>Capacidad de Respuesta</h1>
+    <div class="row">
+        <table class="table table-responsive">
+            <tr>
+                <th>Valor 1</th>
+                <th>Valor 2</th>
+                <th>Valor 3</th>
+                <th>Valor 4</th>
+                <th>Valor 5</th>
+            </tr>
+            @foreach (var respuesta in Model)
+            {
+                <tr>
+                    <td>@respuesta.r1</td>
+                    <td>@respuesta.r2</td>
+                    <td>@respuesta.r3</td>
+                    <td>@respuesta.r4</td>
+                    <td>@respuesta.r5</td>
+                </tr>
+            }
+        </table>
+        <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=2c547d19-e597-4aaa-8148-68297de72fe4&autoAuth=true&ctid=717b9a79-1b91-41ab-a6f7-a579b46a9b41&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+</div>

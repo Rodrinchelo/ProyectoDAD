@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Seguridad";
+}
+
+<div class="row">
+    <h1>Seguridad</h1>
+    <div class="row">
+        <table class="table table-responsive">
+            <tr>
+                <th>Valor 1</th>
+                <th>Valor 2</th>
+                <th>Valor 3</th>
+                <th>Valor 4</th>
+                <th>Valor 5</th>
+            </tr>
+            @foreach (var seguridad in Model)
+            {
+                <tr>
+                    <td>@seguridad.s1</td>
+                    <td>@seguridad.s2</td>
+                    <td>@seguridad.s3</td>
+                    <td>@seguridad.s4</td>
+                    <td>@seguridad.s5</td>
+                </tr>
+            }
+        </table>
+        <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=b1057d5a-c52f-4846-a6b1-e201a9b7ab47&autoAuth=true&ctid=717b9a79-1b91-41ab-a6f7-a579b46a9b41&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+</div>

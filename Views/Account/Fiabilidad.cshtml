@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Fiabilidad";
+}
+
+<div class="row">
+    <h1>Fiabilidad</h1>
+    <div class="row">
+        <table class="table table-responsive">
+            <tr>
+                <th>Valor 1</th>
+                <th>Valor 2</th>
+                <th>Valor 3</th>
+                <th>Valor 4</th>
+                <th>Valor 5</th>
+            </tr>
+            @foreach (var fiabilidad in Model)
+            {
+                <tr>
+                    <td>@fiabilidad.f1</td>
+                    <td>@fiabilidad.f2</td>
+                    <td>@fiabilidad.f3</td>
+                    <td>@fiabilidad.f4</td>
+                    <td>@fiabilidad.f5</td>
+                </tr>
+            }
+        </table>
+        <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=49f82668-0983-44ee-9a61-0e079f76f89b&autoAuth=true&ctid=717b9a79-1b91-41ab-a6f7-a579b46a9b41&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+</div>

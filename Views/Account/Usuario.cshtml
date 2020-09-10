@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Usuario";
+}
+    <div class="row">
+        <h1>Usuarios</h1>
+        </br>
+        <div class="row">
+            <table class="table table-responsive">
+                <tr>
+                    <th>Edad</th>
+                    <th>Sexo</th>
+                    <th>Cantidad</th>
+                </tr>
+                @foreach (var usuario in Model)
+                {
+                    <tr>
+                        <td>@usuario.edad</td>
+                        <td>@usuario.sexo</td>
+                        <td>@usuario.cantidad</td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="col-md-2 form-horizontal">
+            <form action="Fiabilidad" method="post">
+                <br />
+                <button class="btn btn-primary" type="submit">
+                    Fiabilidad
+                </button>
+            </form>
+        </div>
+        <div class="col-md-2 form-horizontal">
+            <form action="Tangibilidad" method="post">
+                <br />
+                <button class="btn btn-primary" type="submit">
+                    Tangibilidad
+                </button>
+            </form>
+        </div>
+        <div class="col-md-2 form-horizontal">
+            <form action="Seguridad" method="post">
+                <br />
+                <button class="btn btn-primary" type="submit">
+                    Seguridad
+                </button>
+            </form>
+        </div>
+        <div class="col-md-2 form-horizontal">
+            <form action="Empatia" method="post">
+                <br />
+                <button class="btn btn-primary" type="submit">
+                    Empatía
+                </button>
+            </form>
+        </div>
+        <div class="col-md-2 form-horizontal">
+            <form action="Respuesta" method="post">
+                <br />
+                <button class="btn btn-primary" type="submit">
+                    Respuesta
+                </button>
+            </form>
+        </div>
+    </div>
+
+   
