@@ -7,25 +7,30 @@
     <div class="row">
         <table class="table table-responsive">
             <tr>
-                <th>Valor 1</th>
-                <th>Valor 2</th>
-                <th>Valor 3</th>
-                <th>Valor 4</th>
-                <th>Valor 5</th>
+                <th>Categorías</th>
+                <th>Pésimo</th>
+                <th>Mal</th>
+                <th>Regular</th>
+                <th>Bueno</th>
+                <th>Excelente</th>
             </tr>
             @foreach (var tangibilidad in Model)
             {
                 <tr>
+                    <td>@tangibilidad.nombre</td>
                     <td>@tangibilidad.t1</td>
                     <td>@tangibilidad.t2</td>
                     <td>@tangibilidad.t3</td>
                     <td>@tangibilidad.t4</td>
                     <td>@tangibilidad.t5</td>
-                    @*<td>@tangibilidad.f6</td>
-                    <td>@tangibilidad.f7</td>*@
                 </tr>
             }
         </table>
-        <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=7a5dcb9f-b217-4391-bb73-755f5e583c61&autoAuth=true&ctid=717b9a79-1b91-41ab-a6f7-a579b46a9b41&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+        <div style="display: flex; align-items: center; justify-content: center; margin: 20px 0;">
+            <iframe width="1000" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiNzU3MzBlNDEtZGZmNS00YTI4LWJmNmYtNzIwNTVhNjdjMzg4IiwidCI6ImY0MmM0NzEyLTY2Y2EtNGY4My1iMTg4LTQ3ZDE2NTNiNmU3MCJ9" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+        <div>
+            <input class="btn btn-primary" type="button" onclick="history.back()" name="volver atrás" value="Volver">
+        </div>
     </div>
 </div>

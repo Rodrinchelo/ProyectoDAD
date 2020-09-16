@@ -4,63 +4,54 @@
 }
     <div class="row">
         <h1>Usuarios</h1>
-        </br>
-        <div class="row">
+        <div style="padding: 20px 40px;">
             <table class="table table-responsive">
                 <tr>
-                    <th>Edad</th>
                     <th>Sexo</th>
                     <th>Cantidad</th>
                 </tr>
                 @foreach (var usuario in Model)
                 {
-                    <tr>
-                        <td>@usuario.edad</td>
-                        <td>@usuario.sexo</td>
-                        <td>@usuario.cantidad</td>
-                    </tr>
-                }
+    <tr>
+        <td>@usuario.sexo</td>
+        <td>@usuario.cantidad</td>
+    </tr>}
             </table>
         </div>
-        <div class="col-md-2 form-horizontal">
-            <form action="Fiabilidad" method="post">
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); grid-template-rows: auto">
+            <form style="display: flex; align-items: center; justify-content: center;" action="Fiabilidad" method="post">
                 <br />
                 <button class="btn btn-primary" type="submit">
                     Fiabilidad
                 </button>
             </form>
-        </div>
-        <div class="col-md-2 form-horizontal">
-            <form action="Tangibilidad" method="post">
+            <form style="display: flex; align-items: center; justify-content: center;" action="Tangibilidad" method="post">
                 <br />
                 <button class="btn btn-primary" type="submit">
                     Tangibilidad
                 </button>
             </form>
-        </div>
-        <div class="col-md-2 form-horizontal">
-            <form action="Seguridad" method="post">
+            <form style="display: flex; align-items: center; justify-content: center;" action="Seguridad" method="post">
                 <br />
                 <button class="btn btn-primary" type="submit">
                     Seguridad
                 </button>
             </form>
-        </div>
-        <div class="col-md-2 form-horizontal">
-            <form action="Empatia" method="post">
+            <form style="display: flex; align-items: center; justify-content: center;" action="Empatia" method="post">
                 <br />
                 <button class="btn btn-primary" type="submit">
                     Empatía
                 </button>
             </form>
-        </div>
-        <div class="col-md-2 form-horizontal">
-            <form action="Respuesta" method="post">
+            <form style="display: flex; align-items: center; justify-content: center;" action="Respuesta" method="post">
                 <br />
                 <button class="btn btn-primary" type="submit">
                     Respuesta
                 </button>
             </form>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; margin: 20px 0;">
+            <iframe width="1000" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiMzU0Y2M1MTUtMzJkYy00YzBhLWFkNmMtOWMyMTlmOGNlMDI3IiwidCI6ImY0MmM0NzEyLTY2Y2EtNGY4My1iMTg4LTQ3ZDE2NTNiNmU3MCJ9" frameborder="0" allowFullScreen="true"></iframe>
         </div>
     </div>
 

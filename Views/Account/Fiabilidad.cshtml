@@ -7,15 +7,17 @@
     <div class="row">
         <table class="table table-responsive">
             <tr>
-                <th>Valor 1</th>
-                <th>Valor 2</th>
-                <th>Valor 3</th>
-                <th>Valor 4</th>
-                <th>Valor 5</th>
+                <th>Categorías</th>
+                <th>Pésimo</th>
+                <th>Mal</th>
+                <th>Regular</th>
+                <th>Bueno</th>
+                <th>Excelente</th>
             </tr>
             @foreach (var fiabilidad in Model)
             {
                 <tr>
+                    <td>@fiabilidad.nombre</td>
                     <td>@fiabilidad.f1</td>
                     <td>@fiabilidad.f2</td>
                     <td>@fiabilidad.f3</td>
@@ -24,6 +26,11 @@
                 </tr>
             }
         </table>
-        <iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=49f82668-0983-44ee-9a61-0e079f76f89b&autoAuth=true&ctid=717b9a79-1b91-41ab-a6f7-a579b46a9b41&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+        <div style="display: flex; align-items: center; justify-content: center; margin: 20px 0;">
+            <iframe width="1000" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiMTNlMzNhMzAtZTY5Ny00OTA0LWE3YTAtMDQ5NTY3Zjk2OGIzIiwidCI6ImY0MmM0NzEyLTY2Y2EtNGY4My1iMTg4LTQ3ZDE2NTNiNmU3MCJ9" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+        <div>
+            <input class="btn btn-primary" type="button" onclick="history.back()" name="volver atrás" value="Volver">
+        </div>
     </div>
 </div>

@@ -9,7 +9,6 @@ namespace ProyectoDAD.Models
     public class Usuario
     {
         public String nombre { get; set; }
-        public int edad { get; set; }
         public String sexo { get; set; }
         public int cantidad { get; set; }
         public Usuario()
@@ -23,19 +22,17 @@ namespace ProyectoDAD.Models
             SqlCommand com = new SqlCommand();
             SqlDataReader dataReader;
 
-            //con.ConnectionString = "Data Source = DESKTOP-RS7QS73; Database = ProyectoDAD; Integrated Security=true;";
             con.ConnectionString = "Server=tcp:proyectodad.database.windows.net,1433;Initial Catalog=DADProyecto;Persist Security Info=False;User ID=proyectodad;Password=DADProyecto123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             con.Open();
             com.Connection = con;
-            com.CommandText = "SELECT edad, sexo, count(*) as cantidad FROM USUARIO GROUP BY edad, sexo";
+            com.CommandText = "SELECT Sexo, count(*) as cantidad FROM Alumno GROUP BY sexo";
             dataReader = com.ExecuteReader();
 
             while (dataReader.Read())
             {
                 Usuario usuario = new Usuario();
-                usuario.edad = dataReader.GetInt32(0);
-                usuario.sexo = dataReader.GetString(1);
-                usuario.cantidad = dataReader.GetInt32(2);
+                usuario.sexo = dataReader.GetString(0);
+                usuario.cantidad = dataReader.GetInt32(1);
                 user.Add(usuario);
             }
             return user;
